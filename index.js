@@ -1,9 +1,10 @@
+const dotenv = require('dotenv');
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-
+dotenv.config();
 const { PORT } = require('./config/config');
 
 app.listen(PORT ,(err) => {
